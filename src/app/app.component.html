@@ -1,0 +1,9 @@
+<h1>Implementation of Component Life Cycle hooks</h1>
+
+<input type="text" #inpText>&nbsp;
+<button (click)="sendDataChild(inpText)">
+  send Data to child</button>
+<br>
+
+<app-app-lifecyclehooks [childData]="parentData"></app-app-lifecyclehooks>
+<router-outlet></router-outlet>
