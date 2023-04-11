@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-app-lifecyclehooks',
@@ -7,7 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppLifecyclehooksComponent implements OnInit {
 
-  constructor() { }
+  @Input() childData:string="someText";
+  constructor() { 
+    console.log("Constructor is called");
+    console.log(this.childData);
+  }
+
+  ngOnchanges(changes:SimpleChanges){
+    console.log("Child component ngOnchanges is called...!");
+    console.log(changes);
+  }
 
   ngOnInit() {
   }

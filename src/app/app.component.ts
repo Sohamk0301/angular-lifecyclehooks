@@ -7,4 +7,9 @@
 })
 export class AppComponent  {
   name = 'Soham';
+  title="component_lifecyclehooks";
+  parentData:string="";
+  sendDataChild(inpText:HTMLInputElement){
+    this.parentData=inpText.value;
+  }
 }
