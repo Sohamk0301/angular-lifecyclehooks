@@ -18,7 +18,8 @@ export class AppLifecyclehooksComponent implements OnInit {
     console.log(changes);
   }
 
-  ngOnInit() {
+  ngOnInit():void {
+    
   }
 
 }
